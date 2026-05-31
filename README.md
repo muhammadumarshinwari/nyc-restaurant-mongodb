@@ -31,9 +31,12 @@ One thing that tripped me up early — using `$gt` on an array field doesn't gua
 
 ## Running
 
+The dataset is MongoDB's [sample_restaurants](https://www.mongodb.com/docs/atlas/sample-data/sample-restaurants/) collection, which you can load for free via MongoDB Atlas.
+
+Once you have a cluster with the sample data loaded:
+
 ```bash
-mongosh "mongodb://<host>:<port>/<database>" \
+mongosh "mongodb+srv://<your-cluster>.mongodb.net/sample_restaurants" \
   --username <user> \
-  --authenticationDatabase admin \
   --file queries/07_score_range_85_to_100.js
 ```
