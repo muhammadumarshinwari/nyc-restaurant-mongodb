@@ -1,0 +1,1 @@
+db.restaurants.find({ $or: [{ $nor: [{ cuisine: /^Irish/i }, { cuisine: /^Chinese/i }] }, { name: /^Wil/i }] }, { name: 1, borough: 1, cuisine: 1, restaurant_id: 1, _id: 0 }).sort({ cuisine: 1 }).toArray()
